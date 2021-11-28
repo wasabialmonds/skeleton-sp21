@@ -4,15 +4,18 @@ ArrayDeque:
 
 Q: Give an example of at least one idea from the staff solution that would have made your solution better (if any).
 
-A: 
+A: for implementing the printDeque function I used the "for loop" and got the element by using the index, But TA used iterator.next() function of iterator instead. Using iterator is more intuitive because we can shorten the code
 
 Q: What's something you felt proud of in your code, if anything?
 
-A:
+A: Because I made my arrayDeque to circulate, I didn't have to make a new array and copy everything to the shifted index for implementing the addFirst function. Since the copying process isn't needed the speed of the addFirst function is much faster.
 
 Q: What's something that was particularly inelegant in your code, if anything?
 
-A:
+A: I made my arrayDeque to circulate, so I had to use relative index such as "(index+i+1)%array.length" everytime. This made my code hard to debug because it was confusing to know what index I am right now.
+I could have made a helper function which returns the absolute index from the relative index 
+Also I used nested if statements so it made the code hard to understand. I could have separated the listed if loop.
+
 
 Q: What did you learn by talking to your partner about writing ArrayDeque?
 
@@ -20,7 +23,7 @@ A:
 
 Q: What do you wish you would have known before writing ArrayDeque, if anything?
 
-A:
+A: I spent a lot of time to implement the Max() function in MaxArrayDeque. I didn’t know how the comparator works and I didn’t know how the compare function can sort out the list with different comparators. If we learned about the comparator more deeply in the class before the project I think I could have finished the project in time.
 
 Q: If you wrote ArrayDeque again, what would you do differently, if anything?
 
@@ -32,15 +35,15 @@ LinkedListDeque:
 
 Q: Give an example of at least one idea from the staff solution that would have made your solution better (if any).
 
-A: 
+A: The TA made a keyword for the first and last element of the deque but I just used sentinel.next() or sentinel.prev() everytime, so my code was more verbose and hard to see.
 
 Q: What's something you felt proud of in your code, if anything?
 
-A:
+A: At the beginning I tried to implement my LinkedListDeque, I made my Node class only having the information about the next Node and didn’t think about the prev Node. This made it very hard to implement the remove() function. After figuring out how I could make it easier I found out that it would make it much easier if the Node class had the information about the prev Node. Although this was also in the lecture note, I didn’t realise it so I had to spend a lot of time. I was very proud when I was able to implement the remove function using the upgraded(?) Node class.
 
 Q: What's something that was particularly inelegant in your code, if anything?
 
-A:
+A: Just like my ArrayDeque I didn’t use any helper methods and repeated similar codes in every function implementation. Also when I implemented the remove, print, get functions, I didn’t take care of the exception cases such as when the Deque is empty return null etc. I didn’t have much time so I focused on passing the autograder.
 
 Q: What did you learn by talking to your partner about writing LinkedListDeque?
 
@@ -48,11 +51,11 @@ A:
 
 Q: What do you wish you would have known before writing LinkedListDeque, if anything?
 
-A:
+A: I didn’t fully understand about the Node class which I had to implement inside the LinkedListDeque class. I had to spend some time to understand what the Node class’s function was and how to use it to implement the LinkedListDeque. Also I had some difficulties understanding the process of removing an element from the Deque. It would have made my life easier if I had more understanding about each functions of the LinkedListDeque.
 
 Q: If you wrote LinkedListDeque again, what would you do differently, if anything?
 
-A:
+A: I would use the iterator or stringbuilder to implement the printDeque function. I implemented my printDeque in the naïve way so I had to go through some trial and error to make it pass the autograder, instead of fully understanding what I was doing.
 
 -----
 
